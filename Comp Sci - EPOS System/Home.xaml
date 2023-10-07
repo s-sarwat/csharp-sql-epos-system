@@ -1,0 +1,44 @@
+﻿<Window x:Class="Comp_Sci___EPOS_System.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Comp_Sci___EPOS_System"
+        mc:Ignorable="d"
+        Width="{x:Static SystemParameters.PrimaryScreenWidth}"  
+        Height="{x:Static SystemParameters.PrimaryScreenHeight}"
+        Title="Home" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#FFDADADA">
+    <Grid>
+        <Grid ShowGridLines="True">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="Delivery" Height="300" Width="300" Content="Delivery" Background="#FFC3C3C3" BorderThickness="1,1,1,1" Click="Button_Click" 
+                    Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" FontSize="36" />
+            <Button x:Name="EatIn" Content="Eat In" Height="300" Width="300" Background="#FFC3C3C3" BorderThickness="1,1,1,1" Click="Button_Click" 
+                    Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" FontSize="36" ClipToBounds="True"/>
+            <Button x:Name="Collection" Content="Collection" Height="300" Width="300" Background="#FFC3C3C3" BorderThickness="1,1,1,1" Click="Button_Click" 
+                    Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" FontSize="36" ClipToBounds="True"/>
+            <Button x:Name="Settings" Content="Settings" HorizontalAlignment="Left" Height="100" Width="200" Margin="100,50,0,0" VerticalAlignment="Top" Background="#FFC3C3C3" BorderThickness="1,1,1,1" ClipToBounds="True" Grid.Column="1" Grid.Row="3"/>
+            <Button Content="Bookings" HorizontalAlignment="Left" Margin="350,50,100,0" VerticalAlignment="Top" Height="100" Width="200" Background="#FFC3C3C3" BorderThickness="1,1,1,1" ClipToBounds="True" Grid.Column="1" Grid.Row="3"/>
+        </Grid>
+        <Rectangle Height="36" Margin="0,1028,0,0" Width="1920" Fill="#FFB8B8B8" Stretch="None"/>
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Content="" Margin="1163,774,644,257" Height="33" Width="113" Background="#FFC3C3C3" BorderThickness="1,1,1,1" ClipToBounds="True"/>
+        <Button Content="Customers" Margin="1044,795,764,236" Height="33" Width="112" Background="#FFC3C3C3" BorderThickness="1,1,1,1" ClipToBounds="True"/>
+        <Button x:Name="SignOut" Content="" HorizontalAlignment="Left" Margin="0,1029,0,0" VerticalAlignment="Top" Height="34" Width="42" BorderBrush="{x:Null}" Click="SignOut_Click" ClipToBounds="True">
+            <Button.Background>
+                <ImageBrush ImageSource="/Sign Ouy.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

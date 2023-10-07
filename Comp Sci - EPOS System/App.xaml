@@ -1,0 +1,9 @@
+﻿<Application x:Class="Comp_Sci___EPOS_System.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Comp_Sci___EPOS_System"
+             StartupUri="Home.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
