@@ -1,0 +1,24 @@
+﻿<Window x:Class="Comp_Sci___EPOS_System.TakeawayDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Comp_Sci___EPOS_System"
+        mc:Ignorable="d"
+        Title="TakeawayDetails" Height="800" Width="1600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox x:Name="FirstName_Box" HorizontalAlignment="Left" Margin="320,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="78,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="139"><Run Language="en-gb" Text="First Name:"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="78,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="139"><Run Language="en-gb" Text="Last Name:"/></TextBlock>
+        <TextBox x:Name="LastName_Box" HorizontalAlignment="Left" Margin="320,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="78,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="195"><Run Language="en-gb" Text="Phone Number:"/></TextBlock>
+        <TextBox x:Name="Phone_Box" HorizontalAlignment="Left" Margin="320,263,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="538,659,0,0" VerticalAlignment="Top" Height="72" Width="182" FontFamily="Bahnschrift Light" FontSize="24" Background="#FFF56969" Click="btnCancel_Click"/>
+        <Button Content="Continue" HorizontalAlignment="Left" Margin="880,659,0,0" VerticalAlignment="Top" Height="72" Width="182" FontSize="24" FontFamily="Bahnschrift Light" Background="#FF46C33C" Click="btnContinue_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="78,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="227"><Run Language="en-gb" Text="Special Instructions:"/></TextBlock>
+        <TextBox x:Name="Instructions_Box" HorizontalAlignment="Left" Margin="320,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="504" Height="102" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="78,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="195" Text="Email Address:"/>
+        <TextBox x:Name="Email_Box" HorizontalAlignment="Left" Margin="320,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24"/>
+
+    </Grid>
+</Window>

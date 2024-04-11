@@ -1,0 +1,73 @@
+﻿<Window x:Class="Comp_Sci___EPOS_System.OrderMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Comp_Sci___EPOS_System"
+        mc:Ignorable="d"
+        Title="OrderMenu" Height="800" Width="1600">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="784" VerticalAlignment="Center" Width="248" Fill="#FF4E4E4E"/>
+        <Rectangle HorizontalAlignment="Left" Height="784" VerticalAlignment="Center" Width="428" Fill="Gainsboro" Margin="1172,0,0,0"/>
+        <Button x:Name="btnGroup1" Content="Burgers" HorizontalAlignment="Left" Margin="36,31,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
+        <Button x:Name="btnGroup2" Content="Wraps" HorizontalAlignment="Left" Margin="36,123,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
+        <Button x:Name="btnGroup3" Content="Chicken" HorizontalAlignment="Left" Margin="36,219,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
+        <Button x:Name="btnGroup4" Content="Meal Deals" HorizontalAlignment="Left" Margin="36,315,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
+        <Button x:Name="btnGroup5" Content="Kebabs" HorizontalAlignment="Left" Margin="36,412,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
+        <Button x:Name="btnGroup6" Content="Sides" HorizontalAlignment="Left" Margin="36,509,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
+        <Button x:Name="btnGroup7" Content="Drinks" HorizontalAlignment="Left" Margin="36,602,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
+        <Button x:Name="btnGroup8" Content="Dips" HorizontalAlignment="Left" Margin="36,695,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="124*"/>
+                <ColumnDefinition Width="150*"/>
+                <ColumnDefinition Width="157*"/>
+                <ColumnDefinition Width="157*"/>
+                <ColumnDefinition Width="212*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="90" />
+            </Grid.RowDefinitions>
+            <Button x:Name="btnItem1" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Margin="0,24,0,0" Visibility ="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem2" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="280" Grid.Row="1" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem3" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,8,0,0" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem4" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,88,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem5" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="3" Margin="0,84,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem6" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="4" Margin="0,80,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem7" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="5" Margin="0,74,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem8" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="6" Margin="0,72,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem9" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top"    Height="60" Width="280" Grid.Row="7" Margin="0,68,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem10" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Margin="0,24,0,0" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem11" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="280" Grid.Row="1" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem12" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,8,0,0" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem13" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,88,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem14" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="3" Margin="0,84,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem15" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="4" Margin="0,80,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem16" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="5" Margin="0,74,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem17" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="6" Margin="0,72,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem18" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="7" Margin="0,68,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <StackPanel x:Name="dishListStack" Grid.Column="4" Margin="6,24,174,33" Grid.RowSpan="8"/>
+            <TextBlock Grid.Column="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Dish Name" VerticalAlignment="Top" Margin="10,8,0,0"/>
+            <Rectangle Grid.Column="4" HorizontalAlignment="Left" Height="677" Margin="250,10,0,0" Grid.RowSpan="8" Stroke="#FF949494" VerticalAlignment="Top" Width="1"/>
+            <Rectangle Grid.Column="4" HorizontalAlignment="Left" Height="677" Margin="289,10,0,0" Grid.RowSpan="8" Stroke="#FF949494" VerticalAlignment="Top" Width="1"/>
+            <Rectangle Grid.Column="4" HorizontalAlignment="Left" Height="677" Margin="340,10,0,0" Grid.RowSpan="8" Stroke="#FF949494" VerticalAlignment="Top" Width="1"/>
+            <TextBlock Grid.Column="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Qty" VerticalAlignment="Top" Margin="260,8,0,0"/>
+            <TextBlock Grid.Column="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" Margin="303,8,0,0"/>
+            <StackPanel x:Name="qtyListStack" Grid.Column="4" Margin="251,24,135,33" Grid.RowSpan="8"/>
+            <StackPanel x:Name="priceListStack" Grid.Column="4" Margin="290,24,83,33" Grid.RowSpan="8"/>
+
+        </Grid>
+        <Button Content="BACK" HorizontalAlignment="Left" Margin="1189,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFF18D8D" Foreground="Black" FontSize="16" Click="Button_Click"/>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,14 @@
+﻿<Window x:Class="Comp_Sci___EPOS_System.SettingsMenu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Comp_Sci___EPOS_System"
+        mc:Ignorable="d"
+        Title="Settings" Height="500" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Button Content="Manage Users" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="34" Width="280"/>
+        <Button x:Name="closeBtn" Content="Close" HorizontalAlignment="Center" Margin="0,416,0,0" VerticalAlignment="Top" Height="30" Width="52" Click="Button_Click"/>
+
+    </Grid>
+</Window>

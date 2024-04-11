@@ -1,0 +1,19 @@
+﻿<Window x:Class="Comp_Sci___EPOS_System.BookingConfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Comp_Sci___EPOS_System"
+        mc:Ignorable="d"
+        Title="BookingConfo" Height="800" Width="1600">
+    <Grid>
+        <Rectangle HorizontalAlignment="Center" Height="472" Margin="0,312,0,0" VerticalAlignment="Top" Width="1600" Fill="#FFBBBBBB"/>
+        <Image HorizontalAlignment="Center" Height="106" Margin="0,51,0,0" VerticalAlignment="Top" Width="104" Source="/Green-Tick-Vector-PNG-Images.png"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,160,0,0" TextWrapping="Wrap" Text="Thank You!" VerticalAlignment="Top" Height="41" Width="284" FontSize="28" TextAlignment="Center" Foreground="#FF717171"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,206,0,0" TextWrapping="Wrap" Text="The booking has been confirmed." VerticalAlignment="Top" Height="41" Width="508" FontSize="28" TextAlignment="Center" Foreground="#FF717171"/>
+        <TextBlock HorizontalAlignment="Left" Margin="618,392,0,0" TextWrapping="Wrap" Text="Booking ID: " VerticalAlignment="Top" Height="41" Width="149" FontSize="28" Foreground="Black"/>
+        <TextBlock x:Name="txtTimeCompleted" HorizontalAlignment="Left" Margin="773,438,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="149" FontSize="28" Foreground="Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="618,438,0,0" TextWrapping="Wrap" Text="Time: " VerticalAlignment="Top" Height="40" Width="149" FontSize="28" Foreground="Black"/>
+        <TextBlock x:Name="txtBookingID" HorizontalAlignment="Left" Margin="773,392,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="149" FontSize="28" Foreground="Black"/>
+    </Grid>
+</Window>

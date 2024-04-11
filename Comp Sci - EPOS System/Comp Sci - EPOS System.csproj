@@ -8,9 +8,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="GREEN CHECKMARK.webp" />
+    <None Remove="GREEN TICK.png" />
+    <None Remove="Green-Tick-Vector-PNG-Images.png" />
     <None Remove="Login Button Enlarged.png" />
     <None Remove="Login Button.png" />
     <None Remove="Login.png" />
+    <None Remove="LOGOUT ICON.png" />
+    <None Remove="Logout.png" />
+    <None Remove="SETTINGS.png" />
     <None Remove="Sign Ouy.png" />
   </ItemGroup>
 
@@ -19,9 +25,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="GREEN CHECKMARK.webp" />
+    <Resource Include="GREEN TICK.png" />
+    <Resource Include="Green-Tick-Vector-PNG-Images.png" />
     <Resource Include="Login Button Enlarged.png" />
     <Resource Include="Login Button.png" />
     <Resource Include="Login.png" />
+    <Resource Include="LOGOUT ICON.png" />
+    <Resource Include="Logout.png" />
+    <Resource Include="SETTINGS.png" />
     <Resource Include="Sign Ouy.png" />
   </ItemGroup>
 

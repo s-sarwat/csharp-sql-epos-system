@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Comp_Sci___EPOS_System
 {
@@ -24,21 +12,46 @@ namespace Comp_Sci___EPOS_System
             InitializeComponent();
         }
 
-        private void SignOut_Click(object sender, RoutedEventArgs e)
+        private void ShowLogin(object sender, RoutedEventArgs e)
         {
-            this.Close();   
-            MainWindow Login = new();
-            Login.Show();
+            this.Hide();
+            MainWindow LoginWindow = new();
+            LoginWindow.Show();
+        }
+
+        private void btnSettings_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            SettingsMenu settings = new SettingsMenu();
+            settings.Show();
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnDelivery_Click(object sender, RoutedEventArgs e)
         {
-
+            Hide();
+            CustomerDetails delivery = new CustomerDetails();
+            delivery.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void btnBookings_Click(object sender, RoutedEventArgs e)
         {
+            Hide();
+            BookingOptionBox bookingoptions = new BookingOptionBox();
+            bookingoptions.Show();
+        }
+
+        private void btnTakeaway_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            TakeawayDetails takeaway = new TakeawayDetails();   
+            takeaway.Show();
+        }
+
+        private void btnEatIn_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            TableSelection tableSelection = new TableSelection();
 
         }
     }
