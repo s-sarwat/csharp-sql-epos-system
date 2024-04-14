@@ -24,7 +24,10 @@ namespace Comp_Sci___EPOS_System
             InitializeComponent();
         }
 
-
+        public void SetBookingID(string bookingID)
+        {
+            txtBookingID.Text = bookingID;
+        }
         public void SetTime(string time)
         {
             txtTimeCompleted.Text = time;

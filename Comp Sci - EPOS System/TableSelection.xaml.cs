@@ -9,25 +9,26 @@ namespace Comp_Sci___EPOS_System
     /// </summary>
     public partial class TableSelection : Window
     {
-        public Button[] buttonsArray;
-        public int tableNumber;
+        public string OrderType { get; set; }
         public TableSelection()
         {
             InitializeComponent();
-
-            buttonsArray = new Button[] { Table1, Table2, Table3, Table4, Table5, Table6, Table7, Table8, Table9 };
-
         }
 
-        public void Button_Click(object sender, RoutedEventArgs e)
+        public void TableBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button clickedButton)
-            {
-                int tableNumber = Array.IndexOf(buttonsArray, clickedButton) + 1;
-                Hide();
-                CreateBooking bookingcreation = new();
-                bookingcreation.Show();
-            }
+            Button button = sender as Button;
+            NumCustomersInput numCustomersInput = new NumCustomersInput();
+            numCustomersInput.ShowDialog();
+            int tableCustomers = numCustomersInput.NumCustomers;
+            int tableNumber = int.Parse(button.Content.ToString());
+
+            this.Hide();
+            OrderMenu menu = new OrderMenu(tableNumber, tableCustomers);
+            menu.OrderType = OrderType;
+            menu.Show();
+
+
         }
     }
 }

@@ -31,6 +31,7 @@ namespace Comp_Sci___EPOS_System
         {
             Hide();
             CustomerDetails delivery = new CustomerDetails();
+            delivery.OrderType = "Delivery";
             delivery.Show();
         }
 
@@ -44,7 +45,8 @@ namespace Comp_Sci___EPOS_System
         private void btnTakeaway_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            TakeawayDetails takeaway = new TakeawayDetails();   
+            TakeawayDetails takeaway = new TakeawayDetails();
+            takeaway.OrderType = "Takeaway";
             takeaway.Show();
         }
 
@@ -52,6 +54,8 @@ namespace Comp_Sci___EPOS_System
         {
             Hide();
             TableSelection tableSelection = new TableSelection();
+            tableSelection.OrderType = "EatIn";
+            tableSelection.Show();
 
         }
     }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Comp_Sci___EPOS_System"
         mc:Ignorable="d"
-        Title="OrderMenu" Height="800" Width="1600">
+        Title="OrderMenu" Height="800" Width="1600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Rectangle HorizontalAlignment="Left" Height="784" VerticalAlignment="Center" Width="248" Fill="#FF4E4E4E"/>
         <Rectangle HorizontalAlignment="Left" Height="784" VerticalAlignment="Center" Width="428" Fill="Gainsboro" Margin="1172,0,0,0"/>
@@ -55,18 +55,16 @@
             <Button x:Name="btnItem16" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="5" Margin="0,74,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
             <Button x:Name="btnItem17" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="6" Margin="0,72,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
             <Button x:Name="btnItem18" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="7" Margin="0,68,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <StackPanel x:Name="dishListStack" Grid.Column="4" Margin="6,24,174,33" Grid.RowSpan="8"/>
-            <TextBlock Grid.Column="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Dish Name" VerticalAlignment="Top" Margin="10,8,0,0"/>
-            <Rectangle Grid.Column="4" HorizontalAlignment="Left" Height="677" Margin="250,10,0,0" Grid.RowSpan="8" Stroke="#FF949494" VerticalAlignment="Top" Width="1"/>
-            <Rectangle Grid.Column="4" HorizontalAlignment="Left" Height="677" Margin="289,10,0,0" Grid.RowSpan="8" Stroke="#FF949494" VerticalAlignment="Top" Width="1"/>
-            <Rectangle Grid.Column="4" HorizontalAlignment="Left" Height="677" Margin="340,10,0,0" Grid.RowSpan="8" Stroke="#FF949494" VerticalAlignment="Top" Width="1"/>
-            <TextBlock Grid.Column="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Qty" VerticalAlignment="Top" Margin="260,8,0,0"/>
-            <TextBlock Grid.Column="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Price" VerticalAlignment="Top" Margin="303,8,0,0"/>
-            <StackPanel x:Name="qtyListStack" Grid.Column="4" Margin="251,24,135,33" Grid.RowSpan="8"/>
-            <StackPanel x:Name="priceListStack" Grid.Column="4" Margin="290,24,83,33" Grid.RowSpan="8"/>
-
+            <StackPanel x:Name="dishListStack" Grid.Column="4" Margin="6,24,174,33" Grid.RowSpan="8">
+                <ListView x:Name="listOfItems" Height="560" SelectionChanged="listOfItems_SelectionChanged" FontSize="14" />
+            </StackPanel>
+            <TextBlock Grid.Column="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Selected items:" VerticalAlignment="Top" Margin="10,8,0,0"/>
         </Grid>
         <Button Content="BACK" HorizontalAlignment="Left" Margin="1189,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFF18D8D" Foreground="Black" FontSize="16" Click="Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1451,722,0,0" TextWrapping="Wrap" Text="Total:" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock x:Name="totalTextBlock" HorizontalAlignment="Left" Margin="1498,722,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="102"/>
+        <Button x:Name="deleteBtn" Content="DELETE" HorizontalAlignment="Left" Margin="1322,590,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFF18D8D" Foreground="Black" FontSize="16" Click="deleteBtn_Click" IsEnabled="false"/>
+        <Button x:Name="ContinueBtn" Content="CONTINUE" HorizontalAlignment="Left" Margin="1322,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FF4EB354" Foreground="Black" FontSize="16" Click="ContinueBtn_Click"/>
 
 
     </Grid>

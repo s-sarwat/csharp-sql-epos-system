@@ -1,5 +1,7 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Controls.Primitives;
 
 namespace Comp_Sci___EPOS_System.Helpers
 {
@@ -27,7 +29,7 @@ namespace Comp_Sci___EPOS_System.Helpers
             }
 
         }
-        public static void ExecuteQuery(string queryString)
+        public static int ExecuteQuery(string queryString)
         {
             string connectionString = @"Data Source=SARWAT-LENOVO\SQLEXPRESS;Initial Catalog=CSProject;Integrated Security=True";
 
@@ -35,7 +37,21 @@ namespace Comp_Sci___EPOS_System.Helpers
             {
                 SqlCommand command = new(queryString, connection);
                 command.Connection.Open();
-                command.ExecuteNonQuery();
+                return command.ExecuteNonQuery();
+            }
+
+        }
+
+        public static int ExecuteScalar(string queryString)
+        {
+            string connectionString = @"Data Source=SARWAT-LENOVO\SQLEXPRESS;Initial Catalog=CSProject;Integrated Security=True";
+
+            using (SqlConnection connection = new(connectionString))
+            {
+               queryString = queryString + "; SELECT SCOPE_IDENTITY()";
+                SqlCommand command = new(queryString, connection);
+                command.Connection.Open();
+                return Convert.ToInt32(command.ExecuteScalar());
             }
 
         }

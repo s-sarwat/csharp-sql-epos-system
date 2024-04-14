@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comp_Sci___EPOS_System.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace Comp_Sci___EPOS_System
     /// </summary>
     public partial class TakeawayDetails : Window
     {
+        public string OrderType { get; set; }
+
         public TakeawayDetails()
         {
             InitializeComponent();
@@ -64,9 +67,17 @@ namespace Comp_Sci___EPOS_System
                 return;
             }
 
+            Customer customer = new Customer();
+            customer.FirstName = FirstName;
+            customer.LastName = LastName;
+            customer.Email = Email;
+            customer.Phone = Phone;
+            customer.Instructions = Instructions;
+
 
             Hide();
-            OrderMenu menu = new OrderMenu();
+            OrderMenu menu = new OrderMenu(customer);
+            menu.OrderType = OrderType;
             menu.Show();
         }
 

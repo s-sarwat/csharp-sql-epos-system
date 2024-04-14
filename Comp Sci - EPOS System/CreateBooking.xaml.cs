@@ -11,6 +11,7 @@ namespace Comp_Sci___EPOS_System
     /// </summary>
     public partial class CreateBooking : Window
     {
+        public int BookingID { get; set; }
         public CreateBooking()
         {
             InitializeComponent();
@@ -133,7 +134,8 @@ namespace Comp_Sci___EPOS_System
                                 [BookingInstructions])
                                 VALUES ('{FirstName}', '{LastName}', '{Email}', '{Phone}', '{dateTime}', '{bookingTime}', '{PartySize}', '{Instructions}')";
 
-            DBHelper.ExecuteQuery(query);
+
+            int bookingID = DBHelper.ExecuteScalar(query);
 
             //Hide();
             //BookingConfo bookingconfirmation = new();
@@ -143,6 +145,7 @@ namespace Comp_Sci___EPOS_System
             Hide();
             BookingConfo bookingconfirmation = new();
             bookingconfirmation.SetTime(DateTime.Now.ToString("HH:mm:ss"));
+            bookingconfirmation.SetBookingID(bookingID.ToString());
             bookingconfirmation.Show();
 
         }
