@@ -61,10 +61,17 @@
             <TextBlock Grid.Column="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Selected items:" VerticalAlignment="Top" Margin="10,8,0,0"/>
         </Grid>
         <Button Content="BACK" HorizontalAlignment="Left" Margin="1189,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFF18D8D" Foreground="Black" FontSize="16" Click="Button_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1451,722,0,0" TextWrapping="Wrap" Text="Total:" VerticalAlignment="Top" FontSize="18"/>
-        <TextBlock x:Name="totalTextBlock" HorizontalAlignment="Left" Margin="1498,722,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="102"/>
-        <Button x:Name="deleteBtn" Content="DELETE" HorizontalAlignment="Left" Margin="1322,590,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFF18D8D" Foreground="Black" FontSize="16" Click="deleteBtn_Click" IsEnabled="false"/>
-        <Button x:Name="ContinueBtn" Content="CONTINUE" HorizontalAlignment="Left" Margin="1322,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FF4EB354" Foreground="Black" FontSize="16" Click="ContinueBtn_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1279,587,0,0" TextWrapping="Wrap" Text="Subtotal:" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.862,-2.358" Width="81"/>
+        <TextBlock x:Name="totalTextBlock" HorizontalAlignment="Left" Margin="1360,587,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="102" Text=""/>
+        <Button x:Name="deleteBtn" Content="DELETE" HorizontalAlignment="Left" Margin="1189,590,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFF18D8D" Foreground="Black" FontSize="16" Click="deleteBtn_Click" IsEnabled="false"/>
+        <Button x:Name="ContinueBtn" Content="CONTINUE" HorizontalAlignment="Left" Margin="1306,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FF4EB354" Foreground="Black" FontSize="16" Click="ContinueBtn_Click"/>
+        <Button x:Name="ClearTableBtn" Content="CLEAR TABLE" HorizontalAlignment="Left" Margin="1421,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFACDBF9" Foreground="Black" FontSize="14" RenderTransformOrigin="1.297,0.596" Click="ClearTableBtn_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1279,637,0,0" TextWrapping="Wrap" Text="Service Fee:" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.862,-2.358" Width="97"/>
+        <TextBlock x:Name="txt_ServiceFee" HorizontalAlignment="Left" Margin="1381,637,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="102"/>
+        <TextBlock x:Name="DeliveryFee_txtBlock" HorizontalAlignment="Left" Margin="1279,613,0,0" TextWrapping="Wrap" Text="Delivery Fee:" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.862,-2.358" Width="115"/>
+        <TextBlock x:Name="txt_DeliveryFee" HorizontalAlignment="Left" Margin="1386,613,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="102"/>
+        <TextBlock HorizontalAlignment="Left" Margin="1279,661,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.862,-2.358" Width="49" Text="Total:"/>
+        <TextBlock x:Name="txt_finalTotal" HorizontalAlignment="Left" Margin="1330,661,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="102"/>
 
 
     </Grid>

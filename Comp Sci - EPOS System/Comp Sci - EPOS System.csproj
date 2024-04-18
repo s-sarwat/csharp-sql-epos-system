@@ -21,7 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <Compile Remove="D:\Sarwat Y12 Work\Computer Science\EPOS PROJECT\OrderMenu.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="D:\Sarwat Y12 Work\Computer Science\EPOS PROJECT\OrderMenu.xaml" Link="OrderMenu.xaml" />
   </ItemGroup>
 
   <ItemGroup>

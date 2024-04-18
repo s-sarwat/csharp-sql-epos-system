@@ -18,6 +18,7 @@ namespace Comp_Sci___EPOS_System
     {
         public string OrderType { get; set; }
 
+        private decimal ServiceFee_FixedValue = 0.1m;
         private Customer customer;
         private Button[] buttons = new Button[18];
         private ObservableCollection<OrderItem> orderedItems;
@@ -28,10 +29,10 @@ namespace Comp_Sci___EPOS_System
         public OrderMenu(Customer customer)
         {
             InitializeComponent();
-
             this.customer = customer;
             orderedItems = new();
             listOfItems.ItemsSource = orderedItems;
+            ClearTableBtn.Visibility = Visibility.Hidden;
         }
 
         public OrderMenu(int tableNumber, int tableCustomers)
@@ -42,6 +43,10 @@ namespace Comp_Sci___EPOS_System
             listOfItems.ItemsSource = orderedItems;
             this.tableNumber = tableNumber;
             this.tableCustomers = tableCustomers;
+            ClearTableBtn.Visibility = Visibility.Visible;
+            //DeliveryFee_txtBlock.Visibility = Visibility.Hidden;
+            txt_DeliveryFee.Visibility = Visibility.Hidden;
+
         }
 
         private void dishBtn_Click(object sender, RoutedEventArgs e)
@@ -102,6 +107,8 @@ namespace Comp_Sci___EPOS_System
             {
                 MessageBox.Show("No items found from the chosen category.");
             }
+
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -117,6 +124,8 @@ namespace Comp_Sci___EPOS_System
             string selectedItemName = button.Content.ToString();
             string selectedDishPrice = button.Tag.ToString();
             bool matchFound = false;
+            txt_DeliveryFee.Text = "£2.99";
+            
 
             // see if the selected dish is already in my list
             foreach (OrderItem item in orderedItems)
@@ -144,6 +153,7 @@ namespace Comp_Sci___EPOS_System
 
         private void UpdateOrderTotal()
         {
+            decimal DeliveryFee = 2.99m;
             orderTotal = 0;
             foreach (OrderItem item in orderedItems)
             {
@@ -151,6 +161,17 @@ namespace Comp_Sci___EPOS_System
             }
 
             totalTextBlock.Text = "£" + orderTotal.ToString();
+            decimal ServiceFeeTotal = (ServiceFee_FixedValue * orderTotal);
+            decimal FinalTotalAmount = (orderTotal + DeliveryFee + ServiceFeeTotal);
+            txt_ServiceFee.Text = "£" + ServiceFeeTotal.ToString("0.00");
+            txt_finalTotal.Text = "£" + (FinalTotalAmount).ToString("0.00");
+
+            if (OrderType == "Takeaway" || OrderType == "EatIn")
+            {
+                FinalTotalAmount = FinalTotalAmount - DeliveryFee;
+                txt_finalTotal.Text = FinalTotalAmount.ToString("0.00");
+            }
+
         }
 
         private void listOfItems_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -272,7 +293,7 @@ namespace Comp_Sci___EPOS_System
                 DBHelper.ExecuteQuery(query);
             }
 
-            MessageBoxResult result = MessageBox.Show("Your order has successfully been placed.", "Order Confirmation", MessageBoxButton.OK);
+            MessageBoxResult result = MessageBox.Show($"Your order has successfully been placed. Your order number is {orderID}", "Order Confirmation", MessageBoxButton.OK);
 
             if (result == MessageBoxResult.OK)
             {
@@ -311,7 +332,7 @@ namespace Comp_Sci___EPOS_System
                 DBHelper.ExecuteQuery(query);
             }
 
-            MessageBoxResult result = MessageBox.Show("Your order has successfully been placed.", "Order Confirmation", MessageBoxButton.OK);
+            MessageBoxResult result = MessageBox.Show($"Your order has successfully been placed. Your order number is {orderID}.", "Order Confirmation", MessageBoxButton.OK);
 
             if (result == MessageBoxResult.OK)
             {
@@ -321,11 +342,23 @@ namespace Comp_Sci___EPOS_System
             }
         }
 
+        private void ClearTableBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show($"Are you sure you want to clear table number {tableNumber}?", "Clear Table", MessageBoxButton.OK);
+
+            if (result == MessageBoxResult.OK)
+            {
+                string query = $@"DELETE FROM [dbo].[TableOrderDetail]
+                                         WHERE TableID = {tableNumber}";
+
+                string query2 = $@"DELETE FROM [dbo].[TableOrder]
+                                         WHERE TableID = {tableNumber}";
 
 
-
-
-
-
+                DBHelper.ExecuteQuery(query);
+                DBHelper.ExecuteQuery(query2);
+                MessageBox.Show("The table has been cleared.");
+            }
+        }
     }
 }
