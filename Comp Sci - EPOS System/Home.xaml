@@ -48,7 +48,7 @@
         <Button Content="EAT IN" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="152" Width="310" BorderBrush="{x:Null}" Background="#FFE0E0E0" FontFamily="Bahnschrift SemiLight" FontSize="36" Grid.Column="1" Click="btnEatIn_Click"/>
         <Button Content="TAKEAWAY" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" Height="152" Width="310" BorderBrush="{x:Null}" Background="#FFE0E0E0" FontFamily="Bahnschrift SemiLight" FontSize="36" Grid.Column="2" Margin="107,0,0,0" Click="btnTakeaway_Click"/>
         <Button Content="BOOKINGS" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Top" Height="65" Width="310" BorderBrush="{x:Null}" Background="#FFE0E0E0" FontFamily="Bahnschrift SemiLight" FontSize="36" Grid.ColumnSpan="2" Margin="0,245,0,0" Grid.RowSpan="2" Click="btnBookings_Click"/>
-        <Button Content="ORDERS" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="65" Width="310" BorderBrush="{x:Null}" Background="#FFE0E0E0" FontFamily="Bahnschrift SemiLight" FontSize="36" Grid.ColumnSpan="2" Margin="379,245,0,0" Grid.RowSpan="2" Grid.Column="1"/>
+        <Button Content="ORDERS" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Height="65" Width="310" BorderBrush="{x:Null}" Background="#FFE0E0E0" FontFamily="Bahnschrift SemiLight" FontSize="36" Grid.ColumnSpan="2" Margin="379,245,0,0" Grid.RowSpan="2" Grid.Column="1" Click="btnOrders_Click"/>
 
     </Grid>
 

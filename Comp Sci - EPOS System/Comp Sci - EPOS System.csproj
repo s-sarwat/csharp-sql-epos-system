@@ -20,12 +20,14 @@
     <None Remove="Sign Ouy.png" />
   </ItemGroup>
 
+
   <ItemGroup>
     <Compile Remove="D:\Sarwat Y12 Work\Computer Science\EPOS PROJECT\OrderMenu.xaml" />
   </ItemGroup>
 
+
   <ItemGroup>
-    <Page Include="D:\Sarwat Y12 Work\Computer Science\EPOS PROJECT\OrderMenu.xaml" Link="OrderMenu.xaml" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 
   <ItemGroup>

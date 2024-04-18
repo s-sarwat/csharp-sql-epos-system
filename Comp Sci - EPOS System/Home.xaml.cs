@@ -58,5 +58,12 @@ namespace Comp_Sci___EPOS_System
             tableSelection.Show();
 
         }
+
+        private void btnOrders_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            AllOrders allOrders = new AllOrders();
+            allOrders.Show();
+        }
     }
 }

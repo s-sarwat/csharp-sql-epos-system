@@ -33,6 +33,9 @@ namespace Comp_Sci___EPOS_System
             orderedItems = new();
             listOfItems.ItemsSource = orderedItems;
             ClearTableBtn.Visibility = Visibility.Hidden;
+            DeliveryFee_txtBlock.Visibility = Visibility.Visible;
+            
+
         }
 
         public OrderMenu(int tableNumber, int tableCustomers)
@@ -44,8 +47,7 @@ namespace Comp_Sci___EPOS_System
             this.tableNumber = tableNumber;
             this.tableCustomers = tableCustomers;
             ClearTableBtn.Visibility = Visibility.Visible;
-            //DeliveryFee_txtBlock.Visibility = Visibility.Hidden;
-            txt_DeliveryFee.Visibility = Visibility.Hidden;
+            DeliveryFee_txtBlock.Visibility = Visibility.Hidden;
 
         }
 

@@ -29,6 +29,32 @@ namespace Comp_Sci___EPOS_System.Helpers
             }
 
         }
+
+        public static DataTable GetRows2(string queryString)
+        {
+            string connectionString = @"Data Source=SARWAT-LENOVO\SQLEXPRESS;Initial Catalog=CSProject;Integrated Security=True";
+            DataTable dataTable = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(queryString, connection))
+                {
+                    connection.Open();
+
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable);
+                    }
+
+                    connection.Close();
+                }
+            }
+
+            return dataTable;
+        }
+
+
+
         public static int ExecuteQuery(string queryString)
         {
             string connectionString = @"Data Source=SARWAT-LENOVO\SQLEXPRESS;Initial Catalog=CSProject;Integrated Security=True";

@@ -18,5 +18,12 @@ namespace Comp_Sci___EPOS_System
             Home home = new Home();
             home.Show();
         }
+
+        private void btnCustomers_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            AllCustomers allCustomers = new AllCustomers();
+            allCustomers.Show();
+        }
     }
 }
