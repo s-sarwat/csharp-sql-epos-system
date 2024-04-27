@@ -28,11 +28,11 @@ namespace Comp_Sci___EPOS_System
 
         private void txtBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            foreach (char c in e.Text)
+            foreach (char c in e.Text) // This event prevents non-digit characters from being entered
             {
                 if (!char.IsDigit(c))
                 {
-                    e.Handled = true;
+                    e.Handled = true; // Marks the event as "true" and prevents character from being entered
                     return;
                 }
             }
@@ -40,36 +40,34 @@ namespace Comp_Sci___EPOS_System
 
         private void Box_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Space)
+            if (e.Key == Key.Space) // This event prevents spaces from being entered in the text box
             {
                 e.Handled = true;
             }
         }
 
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (txtCustomerNum.Text.Length == 0)
+            if (txtCustomerNum.Text.Length == 0) // Checks if the text box is empty
             {
                 MessageBox.Show("Please enter the number of customers.");
-                return;
+                return; // Display a message indicating the user must enter a number
             }
-
-
+            // Convert the entered data to an integer and store in "NumCustomers" variable
             NumCustomers = int.Parse(txtCustomerNum.Text.ToString());
 
-            if (NumCustomers > 8)
+            if (NumCustomers > 8) // Check if number is greater than the maximum number of customers allowed
             {
                 MessageBox.Show("The number of customers you have entered is above the maximum allowed.");
                 return;
             }
 
-            if (NumCustomers < 1)
+            if (NumCustomers < 1) // Check if number is less than the minimum allowed
             {
                 MessageBox.Show("The number of customers you have entered is not valid.");
                 return;
             }
-            this.Hide();
+            this.Hide();  // Hides the form
         }
     }
 }

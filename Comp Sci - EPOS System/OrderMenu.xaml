@@ -5,18 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Comp_Sci___EPOS_System"
         mc:Ignorable="d"
-        Title="OrderMenu" Height="800" Width="1600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Order menu" Height="800" Width="1600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="#FFADADAD">
     <Grid>
-        <Rectangle HorizontalAlignment="Left" Height="784" VerticalAlignment="Center" Width="248" Fill="#FF4E4E4E"/>
+        <Rectangle HorizontalAlignment="Left" Height="784" VerticalAlignment="Center" Width="248" Fill="#FF969696"/>
         <Rectangle HorizontalAlignment="Left" Height="784" VerticalAlignment="Center" Width="428" Fill="Gainsboro" Margin="1172,0,0,0"/>
-        <Button x:Name="btnGroup1" Content="Burgers" HorizontalAlignment="Left" Margin="36,31,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
-        <Button x:Name="btnGroup2" Content="Wraps" HorizontalAlignment="Left" Margin="36,123,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
-        <Button x:Name="btnGroup3" Content="Chicken" HorizontalAlignment="Left" Margin="36,219,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
-        <Button x:Name="btnGroup4" Content="Meal Deals" HorizontalAlignment="Left" Margin="36,315,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
-        <Button x:Name="btnGroup5" Content="Kebabs" HorizontalAlignment="Left" Margin="36,412,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
-        <Button x:Name="btnGroup6" Content="Sides" HorizontalAlignment="Left" Margin="36,509,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
-        <Button x:Name="btnGroup7" Content="Drinks" HorizontalAlignment="Left" Margin="36,602,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
-        <Button x:Name="btnGroup8" Content="Dips" HorizontalAlignment="Left" Margin="36,695,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="White" FontSize="20" Click="dishBtn_Click"/>
+        <Button x:Name="btnGroup1" Content="Burgers" HorizontalAlignment="Left" Margin="36,31,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Click="dishBtn_Click" FontSize="20" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button x:Name="btnGroup2" Content="Wraps" HorizontalAlignment="Left" Margin="36,123,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="#FFEAEAEA" FontSize="20" Click="dishBtn_Click" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button x:Name="btnGroup3" Content="Chicken" HorizontalAlignment="Left" Margin="36,219,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="#FFEAEAEA" FontSize="20" Click="dishBtn_Click" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button x:Name="btnGroup4" Content="Meal Deals" HorizontalAlignment="Left" Margin="36,315,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="#FFEAEAEA" FontSize="20" Click="dishBtn_Click" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button x:Name="btnGroup5" Content="Kebabs" HorizontalAlignment="Left" Margin="36,412,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="#FFEAEAEA" FontSize="20" Click="dishBtn_Click" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button x:Name="btnGroup6" Content="Sides" HorizontalAlignment="Left" Margin="36,509,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="#FFEAEAEA" FontSize="20" Click="dishBtn_Click" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button x:Name="btnGroup7" Content="Drinks" HorizontalAlignment="Left" Margin="36,602,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="#FFEAEAEA" FontSize="20" Click="dishBtn_Click" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button x:Name="btnGroup8" Content="Dips" HorizontalAlignment="Left" Margin="36,695,0,0" VerticalAlignment="Top" Height="60" Width="176" BorderBrush="{x:Null}" Background="#FFEAEAEA" FontSize="20" Click="dishBtn_Click" Style="{DynamicResource RoundedButtonStyle}"/>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="124*"/>
@@ -37,41 +37,39 @@
                 <RowDefinition Height="90" />
                 <RowDefinition Height="90" />
             </Grid.RowDefinitions>
-            <Button x:Name="btnItem1" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Margin="0,24,0,0" Visibility ="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem2" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="280" Grid.Row="1" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem3" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,8,0,0" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem4" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,88,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem5" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="3" Margin="0,84,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem6" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="4" Margin="0,80,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem7" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="5" Margin="0,74,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem8" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="6" Margin="0,72,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem9" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top"    Height="60" Width="280" Grid.Row="7" Margin="0,68,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem10" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Margin="0,24,0,0" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem11" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="280" Grid.Row="1" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem12" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,8,0,0" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem13" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,88,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem14" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="3" Margin="0,84,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem15" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="4" Margin="0,80,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem16" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="5" Margin="0,74,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem17" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="6" Margin="0,72,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
-            <Button x:Name="btnItem18" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="7" Margin="0,68,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="buttons_Click"/>
+            <Button x:Name="btnItem1" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Margin="0,24,0,0" Visibility ="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem2" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="280" Grid.Row="1" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem3" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,8,0,0" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem4" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,88,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem5" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="3" Margin="0,84,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem6" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="4" Margin="0,80,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem7" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="5" Margin="0,74,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem8" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="6" Margin="0,72,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem9" Grid.Column="1"  HorizontalAlignment="Center" VerticalAlignment="Top"    Height="60" Width="280" Grid.Row="7" Margin="0,68,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem10" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Margin="0,24,0,0" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem11" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="280" Grid.Row="1" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem12" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,8,0,0" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem13" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="2" Margin="0,88,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem14" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="3" Margin="0,84,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem15" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="4" Margin="0,80,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem16" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="5" Margin="0,74,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem17" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="6" Margin="0,72,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
+            <Button x:Name="btnItem18" Grid.Column="2"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="280" Grid.Row="7" Margin="0,68,0,0" Grid.RowSpan="2" Visibility="Hidden" Click="AllDishBtn_Click" Background="#FFEAEAEA" Style="{DynamicResource RoundedButtonStyle}"/>
             <StackPanel x:Name="dishListStack" Grid.Column="4" Margin="6,24,174,33" Grid.RowSpan="8">
                 <ListView x:Name="listOfItems" Height="560" SelectionChanged="listOfItems_SelectionChanged" FontSize="14" />
             </StackPanel>
             <TextBlock Grid.Column="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Selected items:" VerticalAlignment="Top" Margin="10,8,0,0"/>
         </Grid>
-        <Button Content="BACK" HorizontalAlignment="Left" Margin="1189,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFF18D8D" Foreground="Black" FontSize="16" Click="Button_Click"/>
+        <Button Content="BACK" HorizontalAlignment="Left" Margin="1189,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFF7C5C5" Foreground="Black" FontSize="16" Click="BackBtn_Click" Style="{DynamicResource RoundedButtonStyle}"/>
         <TextBlock HorizontalAlignment="Left" Margin="1279,587,0,0" TextWrapping="Wrap" Text="Subtotal:" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.862,-2.358" Width="81"/>
-        <TextBlock x:Name="totalTextBlock" HorizontalAlignment="Left" Margin="1360,587,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="102" Text=""/>
+        <TextBlock x:Name="SubTotal_TextBlock" HorizontalAlignment="Left" Margin="1360,587,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="102" Text=""/>
         <Button x:Name="deleteBtn" Content="DELETE" HorizontalAlignment="Left" Margin="1189,590,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFF18D8D" Foreground="Black" FontSize="16" Click="deleteBtn_Click" IsEnabled="false"/>
-        <Button x:Name="ContinueBtn" Content="CONTINUE" HorizontalAlignment="Left" Margin="1306,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FF4EB354" Foreground="Black" FontSize="16" Click="ContinueBtn_Click"/>
-        <Button x:Name="ClearTableBtn" Content="CLEAR TABLE" HorizontalAlignment="Left" Margin="1421,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFACDBF9" Foreground="Black" FontSize="14" RenderTransformOrigin="1.297,0.596" Click="ClearTableBtn_Click"/>
+        <Button x:Name="ContinueBtn" HorizontalAlignment="Left" Margin="1411,704,0,0" VerticalAlignment="Top" Height="42" Width="158" BorderBrush="{x:Null}" Background="#FFA0FBA6" Foreground="Black" FontSize="16" Click="CheckoutBtn_Click" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button x:Name="ClearTableBtn" Content="CLEAR TABLE" HorizontalAlignment="Left" Margin="1300,704,0,0" VerticalAlignment="Top" Height="42" Width="86" BorderBrush="{x:Null}" Background="#FFACDBF9" Foreground="Black" FontSize="14" RenderTransformOrigin="1.297,0.596" Click="ClearTableBtn_Click" Style="{DynamicResource RoundedButtonStyle}"/>
         <TextBlock HorizontalAlignment="Left" Margin="1279,637,0,0" TextWrapping="Wrap" Text="Service Fee:" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.862,-2.358" Width="97"/>
         <TextBlock x:Name="txt_ServiceFee" HorizontalAlignment="Left" Margin="1381,637,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="102"/>
         <TextBlock x:Name="DeliveryFee_txtBlock" HorizontalAlignment="Left" Margin="1279,613,0,0" TextWrapping="Wrap" Text="Delivery Fee:" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.862,-2.358" Width="115"/>
         <TextBlock x:Name="txt_DeliveryFee" HorizontalAlignment="Left" Margin="1386,613,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="102"/>
-        <TextBlock HorizontalAlignment="Left" Margin="1279,661,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="0.862,-2.358" Width="49" Text="Total:"/>
-        <TextBlock x:Name="txt_finalTotal" HorizontalAlignment="Left" Margin="1330,661,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="18" Width="102"/>
 
 
     </Grid>

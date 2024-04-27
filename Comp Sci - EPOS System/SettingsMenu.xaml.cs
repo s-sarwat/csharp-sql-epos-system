@@ -25,5 +25,12 @@ namespace Comp_Sci___EPOS_System
             AllCustomers allCustomers = new AllCustomers();
             allCustomers.Show();
         }
+
+        private void MenuBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            MenuItems menuItems = new MenuItems();
+            menuItems.Show();
+        }
     }
 }

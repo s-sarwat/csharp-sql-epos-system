@@ -59,11 +59,11 @@ namespace Comp_Sci___EPOS_System
 
         }
 
-        private void btnOrders_Click(object sender, RoutedEventArgs e)
+        private void btnMenu_Click(object sender, RoutedEventArgs e)
         {
-            Hide();
-            AllOrders allOrders = new AllOrders();
-            allOrders.Show();
+            this.Hide();
+            MenuItems menuItems = new MenuItems();
+            menuItems.Show();
         }
     }
 }

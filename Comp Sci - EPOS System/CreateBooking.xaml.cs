@@ -38,7 +38,7 @@ namespace Comp_Sci___EPOS_System
             }
         }
 
-        private void cancelBtn_Click(object sender, RoutedEventArgs e)
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             Hide();
             BookingOptionBox bookingoptions = new BookingOptionBox();
@@ -79,10 +79,10 @@ namespace Comp_Sci___EPOS_System
 
             if (Phone.Length != 11)
             {
-                MessageBoxResult result = MessageBox.Show("Phone number should be 11 digits long. Do you wish to continue with the entered number?", "Invalid input", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                MessageBoxResult phoneresult = MessageBox.Show("Phone number should be 11 digits long. Do you wish to continue with the entered number?", "Invalid input", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
 
-                if (result != MessageBoxResult.Yes)
+                if (phoneresult != MessageBoxResult.Yes)
                 {
                     PhoneNum_Box.Focus();
                     return;
@@ -90,7 +90,7 @@ namespace Comp_Sci___EPOS_System
 
             }
 
-            if (dateTime == "")
+            if (SelectDate.SelectedDate == null)
             {
                 MessageBox.Show("Please enter a valid booking date.");
                 return;
@@ -142,11 +142,21 @@ namespace Comp_Sci___EPOS_System
             //bookingconfirmation.DisplayWindowTime();
             //bookingconfirmation.Show();
 
-            Hide();
-            BookingConfo bookingconfirmation = new();
-            bookingconfirmation.SetTime(DateTime.Now.ToString("HH:mm:ss"));
-            bookingconfirmation.SetBookingID(bookingID.ToString());
-            bookingconfirmation.Show();
+            MessageBoxResult result = MessageBox.Show($"The booking has been confirmed. The booking ID is {bookingID}", "Booking Confirmation", MessageBoxButton.OK);
+
+            if (result == MessageBoxResult.OK)
+            {
+                Hide();
+                BookingOptionBox bookingOptions = new();
+                bookingOptions.Show();
+            }
+
+
+            //Hide();
+            //BookingConfo bookingconfirmation = new();
+            //bookingconfirmation.SetTime(DateTime.Now.ToString("HH:mm:ss"));
+            //bookingconfirmation.SetBookingID(bookingID.ToString());
+            //bookingconfirmation.Show();
 
         }
     }

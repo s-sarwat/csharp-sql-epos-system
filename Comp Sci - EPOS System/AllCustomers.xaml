@@ -20,7 +20,7 @@
                 <DataGridTextColumn Header="Instructions" Binding="{Binding Instructions}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="DELETE" HorizontalAlignment="Center" Margin="0,713,0,0" VerticalAlignment="Top" Height="38" Width="96" Click="DeleteButton_Click"/>
+        <Button Content="DELETE" HorizontalAlignment="Center" Margin="0,713,0,0" VerticalAlignment="Top" Height="38" Width="96" Click="DeleteButton_Click" Style="{DynamicResource RoundedButtonStyle}" FontSize="16"/>
 
     </Grid>
 </Window>

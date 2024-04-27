@@ -7,8 +7,12 @@
         mc:Ignorable="d"
         Title="Settings" Height="500" Width="300" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <Button Content="Manage Customers" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="34" Width="280" Click="btnCustomers_Click"/>
+        <Button Content="Manage customers" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="34" Width="280" Click="btnCustomers_Click"/>
         <Button x:Name="closeBtn" Content="Close" HorizontalAlignment="Center" Margin="0,416,0,0" VerticalAlignment="Top" Height="30" Width="52" Click="Button_Click"/>
+        <Button Content="Manage menu" HorizontalAlignment="Center" Margin="0,74,0,0" VerticalAlignment="Top" Height="34" Width="280" Click="MenuBtn_Click"/>
+        <Button Content="Manage eat-in orders" HorizontalAlignment="Center" Margin="0,131,0,0" VerticalAlignment="Top" Height="34" Width="280" Click="btnCustomers_Click"/>
+        <Button Content="Manage delivery/takeaway orders" HorizontalAlignment="Center" Margin="0,187,0,0" VerticalAlignment="Top" Height="34" Width="280" Click="btnCustomers_Click"/>
+        <Button Content="Manage users" HorizontalAlignment="Center" Margin="0,242,0,0" VerticalAlignment="Top" Height="34" Width="280" Click="btnCustomers_Click"/>
 
     </Grid>
 </Window>

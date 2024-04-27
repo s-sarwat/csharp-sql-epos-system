@@ -27,9 +27,9 @@ namespace Comp_Sci___EPOS_System
             InitializeComponent();
         }
 
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
-            //Code for "cancel" button which takes user back to main menu.
+            //Code for "back" button which takes user back to main menu.
             Hide();
             Home home = new Home();
             home.Show();

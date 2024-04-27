@@ -22,21 +22,11 @@ namespace Comp_Sci___EPOS_System
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
-            //Hide();
-            //Home home = new Home();
-            //home.Show();
-
-
-            FirstName_Box.Text = "Sarwat";
-            LastName_Box.Text = "S";
-            Email_Box.Text = "s@gh.com";
-            Phone_Box.Text = "07777777777";
-            Address_Box.Text = "ssss";
-            City_Box.Text = "ddd";
-            Postcode_Box.Text = "SE153WQ";
-
+            Hide();
+            Home mainmenu = new();
+            mainmenu.Show();
         }
 
         private void Box_PreviewKeyDown(object sender, KeyEventArgs e)
@@ -48,7 +38,7 @@ namespace Comp_Sci___EPOS_System
         }
        
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ContinueBtn_Click(object sender, RoutedEventArgs e)
         {
             
 
@@ -100,9 +90,9 @@ namespace Comp_Sci___EPOS_System
 
             bool postcode_check = false;
 
-            if (char.IsLetter(Postcode[Postcode.Length -2]) && 
+            if (char.IsLetter(Postcode[Postcode.Length - 2]) && 
                 char.IsLetter(Postcode[Postcode.Length - 1]) && 
-                char.IsDigit(Postcode[Postcode.Length -3]) &&
+                char.IsDigit(Postcode[Postcode.Length - 3]) &&
                 char.IsLetter(Postcode[0]))
             {
                 postcode_check = true;

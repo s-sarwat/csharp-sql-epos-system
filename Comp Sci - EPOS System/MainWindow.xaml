@@ -18,12 +18,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Rectangle Height="296" VerticalAlignment="Top" Fill="#FFDADADA" RadiusX="20" RadiusY="20" Margin="10,2,10,0" Grid.Row="1" Grid.RowSpan="2"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF414141" FontFamily="Arial" Height="27" Width="82" FontSize="22" RenderTransformOrigin="0.377,-1.675" Grid.Row="2"><Run Language="en-gb" Text="LOG IN"/></TextBlock>
+        <Rectangle Height="263" VerticalAlignment="Top" Fill="#FFDADADA" RadiusX="20" RadiusY="20" Margin="54,19,54,0" Grid.Row="1" Grid.RowSpan="2"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF414141" FontFamily="Arial" Height="27" Width="82" FontSize="22" RenderTransformOrigin="0.377,-1.675" Grid.Row="2"><Run Language="en-gb" Text="LOG IN"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="175,105,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Foreground="#FF414141" FontFamily="Arial" FontSize="14" Grid.Row="2"><Run Language="en-gb" Text="Staff ID:"/></TextBlock>
-        <TextBox Name="UsernameTextBox" Margin="253,103,0,0" VerticalAlignment="Top" Background="{x:Null}" HorizontalAlignment="Left" Width="238" Grid.Row="2" MaxLength="4" MaxLines="1" KeyDown="UsernameTextBox_KeyDown" AcceptsTab="True"/>
+        <TextBox Name="UsernameTextBox" Margin="253,103,0,0" VerticalAlignment="Top" Background="{x:Null}" HorizontalAlignment="Left" Width="238" Grid.Row="2" MaxLength="4" MaxLines="1" KeyDown="UsernameTextBox_KeyDown" AcceptsTab="True" TextChanged="UsernameTextBox_TextChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="175,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF414141" FontFamily="Arial" Height="23" Width="96" FontSize="14" Grid.Row="2"><Run Language="en-gb" Text="Password:"/></TextBlock>
         <PasswordBox Name="PasswordBox" HorizontalAlignment="Left" Margin="253,0,0,0" VerticalAlignment="Center" Width="239" Background="{x:Null}" Grid.Row="2"/>
-        <Button Content="Log In" HorizontalAlignment="Center" Margin="0,201,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="74" Click="Button_Click"/>
+        <Button Content="Log In" HorizontalAlignment="Center" Margin="0,201,0,0" Grid.Row="2" VerticalAlignment="Top" Height="25" Width="74" Click="LoginBtn_Click"/>
     </Grid>
 </Window>

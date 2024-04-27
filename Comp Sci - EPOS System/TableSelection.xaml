@@ -5,21 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Comp_Sci___EPOS_System"
         mc:Ignorable="d"
-        Title="TableSelection" Height="799.4" Width="1600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Select a table" Height="799.4" Width="1600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="28,22,0,0" TextWrapping="Wrap" Text="Select a Table" VerticalAlignment="Top" Height="50" Width="441" FontSize="36"/>
-        <Button x:Name="Table1" Content="1" HorizontalAlignment="Left" Margin="232,130,0,0" VerticalAlignment="Top" Height="150" Width="200" FontSize="20" BorderBrush="{x:Null}" Click="TableBtn_Click"/>
-        <Button x:Name="Table2" Content="2" HorizontalAlignment="Left" Margin="232,0,0,0" VerticalAlignment="Center" Height="150" Width="200" FontSize="20" BorderBrush="{x:Null}" Click="TableBtn_Click"/>
-        <Button x:Name="Table3" Content="3" HorizontalAlignment="Left" Margin="232,505,0,0" VerticalAlignment="Top" Height="150" Width="200" FontSize="20" BorderBrush="{x:Null}" Click="TableBtn_Click"/>
-        <Ellipse HorizontalAlignment="Center" Height="150" Margin="0,130,0,0" VerticalAlignment="Top" Width="200" Fill="#FFDDDDDD" IsHitTestVisible="False"/>
-        <Ellipse HorizontalAlignment="Center" Height="150" VerticalAlignment="Center" Width="200" Fill="#FFDDDDDD" IsHitTestVisible="False"/>
-        <Ellipse HorizontalAlignment="Center" Height="150" Margin="0,505,0,0" VerticalAlignment="Top" Width="200" Fill="#FFDDDDDD" IsHitTestVisible="False"/>
+        <Rectangle HorizontalAlignment="Center" Height="41" VerticalAlignment="Top" Width="1600" Fill="#FFA3B1FF"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,5,0,0" TextWrapping="Wrap" Text="Please select a table below" VerticalAlignment="Top" Height="31" Width="266" FontSize="22" Foreground="White"/>
+        <Button x:Name="Table1" Content="1" HorizontalAlignment="Left" Margin="232,130,0,0" VerticalAlignment="Top" Height="150" Width="200" FontSize="20" BorderBrush="#FF7F7F7F" BorderThickness="4"  Background="#FFADADAD" Click="TableBtn_Click"/>
+        <Button x:Name="Table2" Content="2" HorizontalAlignment="Left" Margin="232,0,0,0" VerticalAlignment="Center" Height="150" Width="200" FontSize="20" BorderBrush="#FF7F7F7F" BorderThickness="4" Background="#FFADADAD" Click="TableBtn_Click"/>
+        <Button x:Name="Table3" Content="3" HorizontalAlignment="Left" Margin="232,505,0,0" VerticalAlignment="Top" Height="150" Width="200" FontSize="20" BorderBrush="#FF7F7F7F" BorderThickness="4" Background="#FFADADAD" Click="TableBtn_Click"/>
+        <Ellipse HorizontalAlignment="Center" Height="150" Margin="0,130,0,0" VerticalAlignment="Top" Width="200" Fill="#FFADADAD" Stroke="Gray" StrokeThickness="4" IsHitTestVisible="False"/>
+        <Ellipse HorizontalAlignment="Center" Height="150" VerticalAlignment="Center" Width="200" Fill="#FFADADAD" Stroke="Gray" StrokeThickness="4" IsHitTestVisible="False"/>
+        <Ellipse HorizontalAlignment="Center" Height="150" Margin="0,505,0,0" VerticalAlignment="Top" Width="200" Fill="#FFADADAD" Stroke="Gray" StrokeThickness="4" IsHitTestVisible="False"/>
         <Button x:Name="Table4" Content="4" HorizontalAlignment="Center" Margin="0,130,0,0" VerticalAlignment="Top" Height="150" Width="200" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" Click="TableBtn_Click"/>
         <Button x:Name="Table5" Content="5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="150" Width="200" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" Click="TableBtn_Click"/>
         <Button x:Name="Table6" Content="6" HorizontalAlignment="Center" VerticalAlignment="Top" Height="150" Width="200" FontSize="20" Margin="0,505,0,0" BorderBrush="{x:Null}" Background="{x:Null}" Click="TableBtn_Click"/>
-        <Button x:Name="Table7" Content="7" HorizontalAlignment="Left" Margin="1170,130,0,0" VerticalAlignment="Top" Height="150" Width="200" FontSize="20" BorderBrush="{x:Null}" Click="TableBtn_Click"/>
-        <Button x:Name="Table8" Content="8" HorizontalAlignment="Left" Margin="1170,0,0,0" VerticalAlignment="Center" Height="150" Width="200" FontSize="20" BorderBrush="{x:Null}" Click="TableBtn_Click"/>
-        <Button x:Name="Table9" Content="9" HorizontalAlignment="Left" Margin="1170,505,0,0" VerticalAlignment="Top" Height="150" Width="200" FontSize="20" BorderBrush="{x:Null}" Click="TableBtn_Click"/>
+        <Button x:Name="Table7" Content="7" HorizontalAlignment="Left" Margin="1170,130,0,0" VerticalAlignment="Top" Height="150" Width="200" FontSize="20" BorderBrush="#FF7F7F7F" BorderThickness="4" Click="TableBtn_Click" Background="#FFADADAD"/>
+        <Button x:Name="Table8" Content="8" HorizontalAlignment="Left" Margin="1170,0,0,0" VerticalAlignment="Center" Height="150" Width="200" FontSize="20" BorderBrush="#FF7F7F7F" BorderThickness="4" Click="TableBtn_Click" Background="#FFADADAD"/>
+        <Button x:Name="Table9" Content="9" HorizontalAlignment="Left" Margin="1170,505,0,0" VerticalAlignment="Top" Height="150" Width="200" FontSize="20" BorderBrush="#FF7F7F7F" BorderThickness="4"  Background="#FFADADAD" Click="TableBtn_Click"/>
+        <Button x:Name="BackBtn" Content="BACK" HorizontalAlignment="Left" Margin="28,711,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="18" Background="White" Click="BackBtn_Click"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,46,0,0" TextWrapping="Wrap" Text="Please note the maximum capacity for each table is 8 people." VerticalAlignment="Top" Width="304" FontStyle="Italic" FontWeight="Light"/>
 
     </Grid>
 </Window>

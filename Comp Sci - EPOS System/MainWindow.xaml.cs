@@ -17,12 +17,13 @@ namespace Comp_Sci___EPOS_System
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LoginBtn_Click(object sender, RoutedEventArgs e)
 
         {
             string id = UsernameTextBox.Text;
             string password = PasswordBox.Password;
 
+            // Check if the length of the 'id' after removing spaces is not equal to 4
             if (id.Replace(" ", "").Length != 4)
             {
                 MessageBox.Show("Please enter valid Staff ID.");
@@ -30,27 +31,31 @@ namespace Comp_Sci___EPOS_System
             }
 
 
-
+            // Check if ID or password box are blank
             if (id == "" || password == "")
             {
                 MessageBox.Show("Please enter Staff ID and password.");
                 return;
             }
 
-
+            // Construct a SQL query to retrieve data based on the provided 'id' and 'password'
             string query = $"SELECT * FROM Users WHERE ID = {id} AND Password = '{password}'";
 
-            DataRowCollection drc = DBHelper.GetRows(query);
+            // Get the rows that match the query from the database using the DBHelper class
+            DataRow dr = DBHelper.GetRow(query);
 
-            if (drc.Count > 0)
+            // Check if username and password matched
+            if (dr != null)
             {
-                this.Hide();
-                Home homescreen = new();
-                homescreen.Show();
+                //MessageBox.Show("Correct"); // Display a message if details are correct.
+                this.Hide(); // Hide the login form
+                Home mainmenu = new();
+                mainmenu.Show(); // Show the main menu
             }
             else
             {
-                MessageBox.Show("Invalid user or password. Please try again.");
+                // If credentials are incorrect, display a message
+                MessageBox.Show("Invalid user and/or password. Please try again.");
                 return;
             }
 
@@ -65,12 +70,19 @@ namespace Comp_Sci___EPOS_System
 
         }
 
+        // Check if the pressed key is not a number (0-9) or if it is the Space key
         private void UsernameTextBox_KeyDown(object sender, KeyEventArgs e)
         {
+            // If the condition is true, mark the event as handled to prevent the character from being entered
             if ((e.Key < Key.D0 || e.Key > Key.D9) || (e.Key == Key.Space))
             {
                 e.Handled = true;
             }
+        }
+
+        private void UsernameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

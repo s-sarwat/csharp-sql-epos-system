@@ -5,25 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Comp_Sci___EPOS_System"
         mc:Ignorable="d"
-        Title="CustomerDetails" Height="800" Width="1600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Delivery information" Height="800" Width="1600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FFADADAD">
     <Grid Margin="0,3,0,-3">
-        <TextBox x:Name="FirstName_Box" HorizontalAlignment="Left" Margin="320,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" PreviewKeyDown="Box_PreviewKeyDown"/>
+        <TextBox x:Name="FirstName_Box" HorizontalAlignment="Left" Margin="320,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" PreviewKeyDown="Box_PreviewKeyDown" Background="#FFC5C5C5"/>
         <TextBlock HorizontalAlignment="Left" Margin="78,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="139"><Run Language="en-gb" Text="First Name:"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="78,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="139"><Run Language="en-gb" Text="Last Name:"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="78,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="195" Text="Home Address:"/>
-        <TextBox x:Name="LastName_Box" HorizontalAlignment="Left" Margin="320,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" PreviewKeyDown="Box_PreviewKeyDown"/>
-        <TextBox x:Name="Address_Box" HorizontalAlignment="Left" Margin="320,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24"/>
+        <TextBox x:Name="LastName_Box" HorizontalAlignment="Left" Margin="320,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" PreviewKeyDown="Box_PreviewKeyDown" Background="#FFC5C5C5"/>
+        <TextBox x:Name="Address_Box" HorizontalAlignment="Left" Margin="320,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" Background="#FFC5C5C5"/>
         <TextBlock HorizontalAlignment="Left" Margin="78,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="139"><Run Language="en-gb" Text="City:"/></TextBlock>
-        <TextBox x:Name="City_Box" HorizontalAlignment="Left" Margin="320,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24"/>
+        <TextBox x:Name="City_Box" HorizontalAlignment="Left" Margin="320,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" Background="#FFC5C5C5"/>
         <TextBlock HorizontalAlignment="Left" Margin="78,403,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="139"><Run Language="en-gb" Text="Postcode:"/></TextBlock>
-        <TextBox x:Name="Postcode_Box" HorizontalAlignment="Left" Margin="320,403,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" PreviewKeyDown="Box_PreviewKeyDown"/>
+        <TextBox x:Name="Postcode_Box" HorizontalAlignment="Left" Margin="320,403,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" PreviewKeyDown="Box_PreviewKeyDown" Background="#FFC5C5C5"/>
         <TextBlock HorizontalAlignment="Left" Margin="78,475,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="195"><Run Language="en-gb" Text="Phone Number:"/></TextBlock>
-        <TextBox x:Name="Phone_Box" HorizontalAlignment="Left" Margin="320,475,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" PreviewKeyDown="Box_PreviewKeyDown"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="538,680,0,0" VerticalAlignment="Top" Height="72" Width="182" FontFamily="Bahnschrift Light" FontSize="24" Background="#FFF56969" Click="Button_Click"/>
-        <Button Content="Continue" HorizontalAlignment="Left" Margin="880,680,0,0" VerticalAlignment="Top" Height="72" Width="182" FontSize="24" FontFamily="Bahnschrift Light" Background="#FF46C33C" Click="Button_Click_1"/>
+        <TextBox x:Name="Phone_Box" HorizontalAlignment="Left" Margin="320,475,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" PreviewKeyDown="Box_PreviewKeyDown" Background="#FFC5C5C5"/>
+        <Button Content="BACK" HorizontalAlignment="Left" Margin="35,680,0,0" VerticalAlignment="Top" Height="72" Width="182" FontFamily="Bahnschrift Light" FontSize="24" Background="#FFFBFBFB" Click="BackBtn_Click" Style="{DynamicResource RoundedButtonStyle}"/>
+        <Button Style="{DynamicResource RoundedButtonStyle}" Content="CONTINUE" HorizontalAlignment="Left" Margin="1386,680,0,0" VerticalAlignment="Top" Height="72" Width="182" FontSize="24" FontFamily="Bahnschrift Light" Background="#FFFBFBFB" Click="ContinueBtn_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="78,553,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="227"><Run Language="en-gb" Text="Special Instructions:"/></TextBlock>
-        <TextBox x:Name="Instructions_Box" HorizontalAlignment="Left" Margin="320,553,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="102" FontSize="24"/>
+        <TextBox x:Name="Instructions_Box" HorizontalAlignment="Left" Margin="320,553,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="102" FontSize="24" Background="#FFC5C5C5"/>
         <TextBlock HorizontalAlignment="Left" Margin="78,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="195" Text="Email Address:"/>
-        <TextBox x:Name="Email_Box" HorizontalAlignment="Left" Margin="320,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" PreviewKeyDown="Box_PreviewKeyDown"/>
+        <TextBox x:Name="Email_Box" HorizontalAlignment="Left" Margin="320,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" TextChanged="TextBox_TextChanged" Height="36" FontSize="24" PreviewKeyDown="Box_PreviewKeyDown" Background="#FFC5C5C5"/>
     </Grid>
 </Window>

@@ -5,21 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Comp_Sci___EPOS_System"
         mc:Ignorable="d"
-        Title="Create booking" Height="800" Width="1600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Create a new booking" Height="800" Width="1600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FFADADAD">
     <Grid>
-        <TextBox x:Name="FirstName_Box" HorizontalAlignment="Left" Margin="320,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24"/>
+        <TextBox x:Name="FirstName_Box" HorizontalAlignment="Left" Margin="320,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24" Background="#FFC5C5C5"/>
         <TextBlock x:Name="FirstName_Text" HorizontalAlignment="Left" Margin="78,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="139"><Run Language="en-gb" Text="First Name:"/></TextBlock>
         <TextBlock x:Name="LastName_Text" HorizontalAlignment="Left" Margin="78,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="139"><Run Language="en-gb" Text="Last Name:"/></TextBlock>
         <TextBlock x:Name="PhoneNum_Text" HorizontalAlignment="Left" Margin="78,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="195" Text="Phone Number:"/>
-        <TextBox x:Name="LastName_Box" HorizontalAlignment="Left" Margin="320,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24"/>
-        <TextBox x:Name="PhoneNum_Box" HorizontalAlignment="Left" Margin="320,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24"/>
+        <TextBox x:Name="LastName_Box" HorizontalAlignment="Left" Margin="320,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24" Background="#FFC5C5C5"/>
+        <TextBox x:Name="PhoneNum_Box" HorizontalAlignment="Left" Margin="320,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24" Background="#FFC5C5C5"/>
         <TextBlock x:Name="Date_Text" HorizontalAlignment="Left" Margin="78,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="139"><Run Language="en-gb" Text="Date:"/></TextBlock>
         <TextBlock x:Name="Time_Text" HorizontalAlignment="Left" Margin="78,374,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="139"><Run Language="en-gb" Text="Time:"/></TextBlock>
         <TextBlock x:Name="NoGuests_Text" HorizontalAlignment="Left" Margin="78,438,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="195"><Run Language="en-gb" Text="No. of guests:"/></TextBlock>
         <TextBlock x:Name="Instructions_Text" HorizontalAlignment="Left" Margin="78,562,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="227"><Run Language="en-gb" Text="Special Instructions:"/></TextBlock>
-        <TextBox x:Name="Instructions_Box" HorizontalAlignment="Left" Margin="320,562,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="102" FontSize="16" Text="E.g. Baby highchair, Window table, etc." Foreground="Gray" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+        <TextBox x:Name="Instructions_Box" HorizontalAlignment="Left" Margin="320,562,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="102" FontSize="16" Background="#FFC5C5C5" Text="E.g. Baby highchair, Window table, etc." Foreground="Gray" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
         <TextBlock x:Name="Email_Text" HorizontalAlignment="Left" Margin="78,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="195" Text="Email Address:"/>
-        <TextBox x:Name="Email_Box" HorizontalAlignment="Left" Margin="320,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24"/>
+        <TextBox x:Name="Email_Box" HorizontalAlignment="Left" Margin="320,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="504" Height="36" FontSize="24" Background="#FFC5C5C5"/>
         <DatePicker x:Name="SelectDate" HorizontalAlignment="Left" Margin="320,303,0,0" VerticalAlignment="Top" Height="32" Width="206"/>
         <ComboBox x:Name="NoGuests_Box" HorizontalAlignment="Left" Margin="320,438,0,0" VerticalAlignment="Top" Width="504" Height="36" AllowDrop="True">
             <ComboBoxItem Background="{x:Null}" BorderBrush="{x:Null}" Content="1" FontSize="16"/>
@@ -59,8 +59,8 @@
             <ComboBoxItem Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Content="10:00PM"/>
             <ComboBoxItem Background="{x:Null}" BorderBrush="{x:Null}" FontSize="16" Content="10:30PM"/>
         </ComboBox>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="572,688,0,0" VerticalAlignment="Top" Height="47" Width="132" Click="cancelBtn_Click"/>
-        <Button Content="Continue" HorizontalAlignment="Left" Margin="895,688,0,0" VerticalAlignment="Top" Height="47" Width="132" Click="continueBtn_Click"/>
+        <Button Content="BACK" HorizontalAlignment="Left" Margin="26,680,0,0" VerticalAlignment="Top" Height="47" Width="132" Click="BackBtn_Click" Background="#FFFBFBFB" Style="{DynamicResource RoundedButtonStyle}" FontSize="20"/>
+        <Button Content="CONTINUE" HorizontalAlignment="Left" Margin="1431,688,0,0" VerticalAlignment="Top" Height="47" Width="132" Click="continueBtn_Click" Background="#FFFBFBFB" Style="{DynamicResource RoundedButtonStyle}" FontSize="20" IsDefault="True"/>
         <TextBlock x:Name="TableText" HorizontalAlignment="Left" Margin="78,501,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="208"><Run Language="en-gb" Text="Table number:"/></TextBlock>
         <ComboBox x:Name="TableSelector" HorizontalAlignment="Left" Margin="320,501,0,0" VerticalAlignment="Top" Width="504" Height="36" AllowDrop="True">
             <ComboBoxItem Background="{x:Null}" BorderBrush="{x:Null}" Content="Table 1" FontSize="16"/>

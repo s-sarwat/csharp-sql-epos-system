@@ -48,6 +48,7 @@ namespace Comp_Sci___EPOS_System
             this.tableCustomers = tableCustomers;
             ClearTableBtn.Visibility = Visibility.Visible;
             DeliveryFee_txtBlock.Visibility = Visibility.Hidden;
+            txt_DeliveryFee.Visibility = Visibility.Hidden;
 
         }
 
@@ -56,10 +57,13 @@ namespace Comp_Sci___EPOS_System
             ShowDishes(sender as Button);
         }
 
+        // Method to display dishes based on the selected category button
         public void ShowDishes(Button button)
         {
+            // Get the group name from the selected button's content
             string groupName = button.Content.ToString();
 
+            // Construct an SQL query to retrieve dishes from the database based on the group name
             string query = "SELECT Dish.ID," +
                             "Dish.[Name],[Price]," +
                             "[GroupId]" +
@@ -68,8 +72,13 @@ namespace Comp_Sci___EPOS_System
                             "ON Dish.GroupId = [Group].Id " +
                             $"WHERE[Group].Name = '{groupName}'";
 
+
+
+            // Get the rows that match the query from the database using DBHelper
             DataRowCollection drc = DBHelper.GetRows(query);
             int count = drc.Count;
+
+            // Assign buttons to the array
             buttons[0] = btnItem1;
             buttons[1] = btnItem2;
             buttons[2] = btnItem3;
@@ -89,7 +98,7 @@ namespace Comp_Sci___EPOS_System
             buttons[16] = btnItem17;
             buttons[17] = btnItem18;
 
-            // Hide buttons
+            // Hide all buttons initially
             for (int i = 0; i < buttons.Count(); i++)
             {
                 buttons[i].Content = "";
@@ -100,27 +109,31 @@ namespace Comp_Sci___EPOS_System
             {
                 for (int i = 0; i < count; i++)
                 {
+                    // Display dish name on the corresponding button
                     buttons[i].Content = drc[i]["Name"];
+                    // Set the tag of the button to the price of the dish
                     buttons[i].Tag = decimal.Parse(drc[i]["Price"].ToString());
+                    // Make the button visible
                     buttons[i].Visibility = Visibility.Visible;
                 }
             }
             else
             {
+                // If no dishes are found for the selected group, show a message
                 MessageBox.Show("No items found from the chosen category.");
             }
 
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             Hide();
-            Home home = new Home();
-            home.Show();
+            Home mainmenu = new Home();
+            mainmenu.Show();
         }
 
-        private void buttons_Click(object sender, RoutedEventArgs e)
+        private void AllDishBtn_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
             string selectedItemName = button.Content.ToString();
@@ -129,7 +142,7 @@ namespace Comp_Sci___EPOS_System
             txt_DeliveryFee.Text = "£2.99";
             
 
-            // see if the selected dish is already in my list
+            // see if the selected dish is already in the list
             foreach (OrderItem item in orderedItems)
             {
                 if (selectedItemName == item.Name)
@@ -150,6 +163,7 @@ namespace Comp_Sci___EPOS_System
             }
 
             listOfItems.Items.Refresh();
+
             UpdateOrderTotal();
         }
 
@@ -162,16 +176,16 @@ namespace Comp_Sci___EPOS_System
                 orderTotal += item.Qty * item.Price;
             }
 
-            totalTextBlock.Text = "£" + orderTotal.ToString();
+            SubTotal_TextBlock.Text = "£" + orderTotal.ToString();
             decimal ServiceFeeTotal = (ServiceFee_FixedValue * orderTotal);
             decimal FinalTotalAmount = (orderTotal + DeliveryFee + ServiceFeeTotal);
             txt_ServiceFee.Text = "£" + ServiceFeeTotal.ToString("0.00");
-            txt_finalTotal.Text = "£" + (FinalTotalAmount).ToString("0.00");
+            ContinueBtn.Content = $"CHECKOUT - £{FinalTotalAmount.ToString("0.00")}";
 
             if (OrderType == "Takeaway" || OrderType == "EatIn")
             {
                 FinalTotalAmount = FinalTotalAmount - DeliveryFee;
-                txt_finalTotal.Text = FinalTotalAmount.ToString("0.00");
+                ContinueBtn.Content = $"CHECKOUT - £{FinalTotalAmount.ToString("0.00")}";
             }
 
         }
@@ -190,17 +204,25 @@ namespace Comp_Sci___EPOS_System
 
         private void deleteBtn_Click(object sender, RoutedEventArgs e)
         {
+            // Check if an item is selected in the listOfItems
             if (listOfItems.SelectedItem != null)
             {
+                // Get the selected OrderItem from the listOfItems
                 OrderItem itemToRemove = listOfItems.SelectedItem as OrderItem;
+
+                // Remove the selected item from the orderedItems collection
                 orderedItems.Remove(itemToRemove);
+
                 listOfItems.SelectedItem = null;
+                // Disable the deleteBtn since no item is selected now
                 deleteBtn.IsEnabled = false;
+
+                // Update the total order amount
                 UpdateOrderTotal();
             }
         }
 
-        private void ContinueBtn_Click(object sender, RoutedEventArgs e)
+        private void CheckoutBtn_Click(object sender, RoutedEventArgs e)
         {
 
             if (OrderType == "Delivery")
