@@ -8,7 +8,7 @@ This project is a takeaway ePOS system designed to provide a simple interface fo
 
 The application uses a SQL Server database to store and manage the system's data, with C# handling the application's functionality and user interface.
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 * **C#**
 * **.NET / Visual Studio**
